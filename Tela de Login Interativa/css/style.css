@@ -1,0 +1,255 @@
+/* FONTE */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+/*DEFINIÇÕES GERAIS*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #ecf0f1;
+}
+
+.content {
+	background-color: #fff;
+	border-radius: 15px;
+	width: 960px;
+	height: 80%;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.content::before {
+	content: "";
+	position: absolute;
+	background-color: #58af9b;
+	width: 40%;
+	height: 100%;
+	border-radius: 15px 0 0 15px;
+}
+
+.title {
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.title-primary {
+	color: #fff;
+}
+
+.title-second {
+	color: #58af9b;
+}
+
+
+.description {
+	font-size: 14px;
+	font-weight: 300;
+	line-height:30px;
+}
+
+.description-primary {
+		color: #fff;
+}
+
+.description-second {
+		color: #7f8c8d;
+}
+.btn {
+	text-transform: uppercase;
+	border-radius: 15px;
+	color: #fff;
+	font-size: 10px;
+	padding: 10px 50px;
+	cursor: pointer;
+	font-weight: bold;
+	width: 150px;
+	align-self: center;
+}
+
+/*TIRAR A MARGEM QUE FICA AO CLICAR NO BOTÃO*/
+.btn:focus {
+	outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
+.btn-primary {
+	background-color: transparent;
+	border: 1px solid #fff;
+	transition: background-color .7s;
+}
+
+.btn-primary:hover {
+	background-color: #fff;
+	color: #58af9b;
+}
+
+.btn-second {
+	background-color: #58af9b;
+	border: 1px solid #58af9b;
+	transition: background-color .7s;
+}
+
+.btn-second:hover {
+	background-color: transparent;
+	color: #58af9b;
+}
+
+
+
+
+/*PRIMEIRA PÁGINA*/
+
+.first-content {
+	display: flex; 
+}
+
+.first-column {
+	text-align: center;
+	width: 40%;
+	z-index: 10;
+}
+
+.second-column {
+	text-align: center;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Social Media */
+
+.social-media{
+	margin: 1em 0;
+}
+.social-media__list {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+}
+
+.item-social-media{
+	border: 1px solid #bdc3c7;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #95a5a6;
+}
+
+/*PSEUDO CLASS PARA NÃO APLICAR NO PRIMEIRO*/
+.link-social-media:not(:first-child) {
+	margin-left: 10px;
+}
+
+.link-social-media:hover .item-social-media{
+	background-color: #58af9b;
+	color: #fff;
+	border-color: #58af9b;
+}
+
+.link-social-media .item-social-media{
+	transition: background-color .7s;
+}
+
+
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 55%;
+}
+
+.form input {
+	height: 45px;
+	border:none;
+	background-color: #ecf0f1;
+	margin-left: 10px;
+	width: 100%;
+	
+}
+
+.form input:hover {
+	border: 1px solid #58af9b;
+	border-radius: 4px;
+}
+
+/*TIRAR A MARGEM QUE FICA AO CLICAR NO input*/
+.form input:focus {
+	outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
+
+.label-input {
+	background-color: #ecf0f1;
+	display: flex;
+	align-items: center;
+	margin: 8px 0;
+	border-radius: 4px;
+}
+
+.icon-modify {
+	padding: 0 5px;
+	color: #7f8c8d;
+}
+
+/*SECOND CONTENT */
+
+.second-content {
+	position: absolute;
+	display: none;
+}
+
+.second-content.content::before {
+	border-radius:0 15px 15px 0;
+}
+
+.link-forgot {
+	margin: 10px auto;
+	text-decoration: none;
+	color: #7f8c8d;
+	width: 180px;
+}
+
+.link-forgot:hover {
+	color: #58af9b;
+}
+
+/*DEFINIÇÕES DE POSICIONAMENTO - LAYOUT */
+
+/*SING IN*/
+.sing-in-js .second-content {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.sing-in-js .first-content {
+	display: none;
+}
+
+/*SING UP*/
+
+.sing-up-js .second-content {
+	display: none;
+}
+
+.sing-up-js .first-content {
+	display: flex;
+}
+
